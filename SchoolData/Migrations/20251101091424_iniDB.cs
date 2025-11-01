@@ -18,10 +18,10 @@ namespace SchoolData.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ModifyedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifyedOnBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModifyedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ModifyedOnBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -35,10 +35,10 @@ namespace SchoolData.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ModifyedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifyedOnBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModifyedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ModifyedOnBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CityId = table.Column<int>(type: "int", nullable: false)
@@ -61,10 +61,10 @@ namespace SchoolData.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ModifyedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifyedOnBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModifyedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ModifyedOnBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CityId = table.Column<int>(type: "int", nullable: false)

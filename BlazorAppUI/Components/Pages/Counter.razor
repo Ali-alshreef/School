@@ -1,0 +1,40 @@
+﻿@page "/counter"
+@using SchoolCore.Models
+@using SchoolData.DataDB
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        SchoolDB db = new SchoolDB();
+
+
+        var c = db.Cities.FirstOrDefault();
+        if (c != null)
+        {
+            c.Name = "Updated from Blazor ";
+            db.SaveChanges();
+        }
+        // City city = new City();
+        // city.Name = "Zliten From Blazor";
+        // city.Name2 = "Zliten";
+        // db.Cities.Add(city);
+        // db.SaveChanges();
+
+
+        // Student s = new Student();
+        // s.FullName = "111";
+
+
+    }
+}
