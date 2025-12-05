@@ -10,7 +10,12 @@ namespace SchoolCore.Models
     {
         public int Id { get; set; }
 
-        public string PropertyValue { get; set; }
-
+        public int TableId { get; set; }
+        public string TableName { get; set; }
+        public string ColmunName { get; set; }
+        public string OldValue { get; set; }
+        public string NewValue { get; set; }
+        public string AppUser { get; set; }
+        public DateTime Date { get; set; }
     }
 }

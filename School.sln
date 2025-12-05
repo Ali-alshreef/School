@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolCore", "SchoolCore\SchoolCore.csproj", "{627829A6-40F4-473A-B01C-0B2B706A787C}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppUI", "WpfAppUI\WpfAppUI.csproj", "{8044F67B-835A-49EA-A774-EAA0560E0947}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppUI", "MauiAppUI\MauiAppUI.csproj", "{682D0A21-4F00-4883-9B01-EB7F029B65C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAPI", "SchoolAPI\SchoolAPI.csproj", "{16495DBB-782E-457D-A68A-37AFA8B78B7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{682D0A21-4F00-4883-9B01-EB7F029B65C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{682D0A21-4F00-4883-9B01-EB7F029B65C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{682D0A21-4F00-4883-9B01-EB7F029B65C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16495DBB-782E-457D-A68A-37AFA8B78B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16495DBB-782E-457D-A68A-37AFA8B78B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16495DBB-782E-457D-A68A-37AFA8B78B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16495DBB-782E-457D-A68A-37AFA8B78B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

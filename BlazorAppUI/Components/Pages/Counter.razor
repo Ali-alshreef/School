@@ -18,11 +18,15 @@
     {
         SchoolDB db = new SchoolDB();
 
+        //var users = await _context.Users.AsNoTracking().ToListAsync();
 
-        var c = db.Cities.FirstOrDefault();
+        var c = db.Students.FirstOrDefault(x=>x.Id==2);
+
+        //var cities = db.Cities.ToList();
+
         if (c != null)
         {
-            c.Name = "Updated from Blazor ";
+            c.FullName = "Ahmed";
             db.SaveChanges();
         }
         // City city = new City();
