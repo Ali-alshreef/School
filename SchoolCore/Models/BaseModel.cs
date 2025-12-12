@@ -19,7 +19,6 @@ namespace SchoolCore.Models
         public string? CreatedBy { get; set; }
         public DateTime? ModifyedOn { get; set; }
 
-        [MyAtterbut]
         public string? ModifyedOnBy { get;set; }
     }
 }

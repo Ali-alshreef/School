@@ -13,17 +13,5 @@ namespace SchoolCore.Models
 
         [StringLength(50)]
         public string Name { get; set; }
-
-        [NotMapped]
-        public string Name2 { get; set; }
-
-        public string Name3
-        {
-            get
-            {
-                return "";
-            }
-        }
-
     }
 }

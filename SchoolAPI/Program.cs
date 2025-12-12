@@ -27,7 +27,7 @@ namespace SchoolAPI
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
-            //app.Map("/Test",()=> "Api Work");
+            app.Map("/Test",()=> "Api Work");
             app.Run();
         }
     }
