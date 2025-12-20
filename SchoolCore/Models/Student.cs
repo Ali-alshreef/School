@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace SchoolCore.Models
 {
     public class Student : PersonInfo
-    {
-        
+    {    
         public string Number { get; set; }
     }
 }

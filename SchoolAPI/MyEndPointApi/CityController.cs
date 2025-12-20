@@ -9,11 +9,6 @@ namespace SchoolAPI.MyEndPointApi
     [ApiController]
     public class CityController : ControllerBase
     {
-
-
-
-
-
         private readonly SchoolDB db;
         public CityController( SchoolDB schoolDB)
         {
@@ -38,19 +33,16 @@ namespace SchoolAPI.MyEndPointApi
                 return BadRequest("بيانات المدينة فارغة");
             }
             // 5. التحقق من الاسم
-            if (string.IsNullOrWhiteSpace(newCity.Name))
+            if (string.IsNullOrWhiteSpace(newCity.Name) || string.IsNullOrEmpty(newCity.Name))
             {
                 return BadRequest("اسم المدينة مطلوب");
             }
-
-
             // 7. إضافة المدينة للقائمة
             db.Cities.Add(newCity);
-
             db.SaveChanges();
-
             // 8. إرجاع المدينة المضافة مع الرمز 201
-            return CreatedAtAction(nameof(GetCity), new { id = newCity.Id }, newCity);
+            // return CreatedAtAction(nameof(GetCity), new { id = newCity.Id }, newCity);
+            return Ok();
         }
 
         // GET: api/City/Get/{id}

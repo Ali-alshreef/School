@@ -3,6 +3,7 @@ using SchoolData.DataDB;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Xml.Linq;
 
 namespace WinFormsAppUI
@@ -36,9 +37,12 @@ namespace WinFormsAppUI
             var response = client.GetAsync("https://localhost:7088/api/City/GetCities").Result;
             if (response.IsSuccessStatusCode)
             {
-                var c = response.Content;
-                var cities = response.Content.ReadFromJsonAsync<List<City>>().Result;
+                var cities = response.Content.ReadFromJsonAsync<List<MyCity>>().Result;
                 dataGridView1.DataSource = cities;
+            }
+            else
+            {
+                MessageBox.Show("Œÿ« ›Ì «·»Ì«‰«  „‰ «·ˆAPI");
             }
         }
 
@@ -47,7 +51,7 @@ namespace WinFormsAppUI
             // 1. ≈‰‘«¡ ﬂ«∆‰ «·„œÌ‰… „‰ ≈œŒ«· «·„” Œœ„
             City newCity = new City
             {
-                Name = "Zliten",
+                Name =textBox1.Text,
             };
 
             // 2.  ÕÊÌ· «·ﬂ«∆‰ ≈·Ï JSON
@@ -63,8 +67,7 @@ namespace WinFormsAppUI
                 {
                     // 5. ≈—”«· ÿ·» POST
                     var response = await client.PostAsync(
-                        "https://localhost:7088/api/City/Create",
-                        content);
+                        "https://localhost:7088/api/City/Create",content);
 
                     // 6. «· Õﬁﬁ „‰ «·‰ ÌÃ…
                     if (response.IsSuccessStatusCode)
@@ -88,5 +91,14 @@ namespace WinFormsAppUI
                 }
             }
         }
+    }
+
+    public class MyCity
+    {
+        [JsonPropertyName("id")]
+        public int CityId { get; set; }
+
+        [JsonPropertyName("name")]
+        public string CityName { get; set; }
     }
 }
